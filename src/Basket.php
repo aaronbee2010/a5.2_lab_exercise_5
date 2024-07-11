@@ -59,7 +59,7 @@ class Basket {
             $salePrice = self::returnSalePrice($priceOfItemWithoutVat, $doesVatApplyToCurrentItem);
             $totalPriceOfAllItemsInBasket += $salePrice;
 
-            // Add the current basket row to the printed basket string
+            // Generate a basket row for the current item then append it to the printed basket string
             $basketOutput .= self::returnPrintedBasketRow($nameOfItem, $salePrice);
         }
 
