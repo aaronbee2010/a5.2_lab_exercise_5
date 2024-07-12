@@ -24,7 +24,11 @@ class Basket {
      * otherwise it will return two tabs.
      */
     private static function returnCorrectSeparatorForNameSize(string $name): string {
-        return (strlen($name) < 16) ? "\t\t\t" : "\t\t";
+        $lengthOfName = strlen($name);
+        
+        return ($lengthOfName < 16)
+            ? "\t\t\t"
+            : "\t\t";
     }
 
     /**
